@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Branches{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="row mt-5">
+        <div class="col-md-6 mx-auto">
+            <h2>Branches</h2>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="branchesDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select District
+                </button>
+                <div class="dropdown-menu" aria-labelledby="branchesDropdown">
+                    {% for district in districts %}
+                        <a class="dropdown-item" href="{{ district.wikipedia_link }}" target="_blank">
+                            {{ district.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+
+{% extends 'base.html' %}
+{% block title %}New Page{% endblock %}
+{% block content %}
+    <h2>New Page</h2>
+    <p>Click the button to provide additional details:</p>
+    <a href="{% url 'bankapp:registration_user' %}" class="btn btn-primary">Provide Additional Details</a>
+{% endblock %}

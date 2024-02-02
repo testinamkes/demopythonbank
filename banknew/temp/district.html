@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}District{% endblock %}
+
+{% block content %}
+    <div class="row mt-5">
+        <div class="col-md-8 mx-auto">
+            <h2>{{ district.name }} District</h2>
+            <p>{{ district.description }}</p>
+        </div>
+    </div>
+{% endblock %}

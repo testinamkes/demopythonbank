@@ -1,0 +1,52 @@
+/* custom.css */
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Set your desired background color */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #007bff; /* Set your desired navbar background color */
+}
+
+.nav-item, .dropdown-item {
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Banner styling */
+.banner {
+    height: 200px; /* Set your desired height */
+    background-color: #333; /* Set your desired background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img {
+    max-width: 100%; /* Make sure the logo doesn't exceed the container */
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px; /* Add some space between form groups */
+}
+
+/* Button styling */
+.btn {
+    letter-spacing: 0.1em;
+}
+
+/* Footer styling */
+footer {
+    background-color: #007bff; /* Set your desired footer background color */
+    color: #fff; /* Set your desired text color */
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

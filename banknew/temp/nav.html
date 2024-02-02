@@ -1,0 +1,266 @@
+
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'bankapp:home' %}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'bankapp:home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'bankapp:login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'bankapp:register_user' %}">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'bankapp:dashboard' %}">Dashboard</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="branchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Branches
+                </a>
+                <div class="dropdown-menu" aria-labelledby="branchDropdown">
+                    {% for district in districts_list %}
+                        {% comment %} Construct Wikipedia URL based on district name {% endcomment %}
+                        {% with wikipedia_url="https://en.wikipedia.org/wiki/"|add:district.name %}
+                            <a class="dropdown-item" href="{{ wikipedia_url }}" target="_blank">{{ district.name }}</a>
+                        {% endwith %}
+                    {% endfor %}
+                    <div class="dropdown-divider"></div>
+                    {% comment %} Add Wikipedia URLs for additional districts {% endcomment %}
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam" target="_blank">Ernakulam</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur" target="_blank">Kannur</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alappuzha" target="_blank">Alappuzha</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Malappuram" target="_blank">Malappuram</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram" target="_blank">Thiruvananthapuram</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{% load static %}-->
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="{% url 'bankapp:home' %}">-->
+<!--        &lt;!&ndash; Add your logo or text as needed &ndash;&gt;-->
+<!--    </a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"-->
+<!--            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--        <ul class="navbar-nav ml-auto"> &lt;!&ndash; Use ml-auto to push items to the right &ndash;&gt;-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:home' %}">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:login' %}">Login</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:register_user' %}">Register</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:dashboard' %}">Dashboard</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="districtDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                    Branches-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="districtDropdown">-->
+<!--                    {% for district in districts_list %}-->
+<!--                        {% comment %} Construct Wikipedia URL based on district name {% endcomment %}-->
+<!--                        {% with wikipedia_url="https://en.wikipedia.org/wiki/"|add:district.name %}-->
+<!--                            <a class="dropdown-item" href="{{ wikipedia_url }}" target="_blank">{{ district.name }}</a>-->
+<!--                        {% endwith %}-->
+<!--                    {% endfor %}-->
+<!--                    <div class="dropdown-divider"></div>-->
+<!--                        {% comment %} Add Wikipedia URLs for additional districts {% endcomment %}-->
+<!--                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam" target="_blank">Ernakulam</a>-->
+<!--                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur" target="_blank">Kannur</a>-->
+<!--                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alappuzha" target="_blank">Alappuzha</a>-->
+<!--                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Malappuram" target="_blank">Malappuram</a>-->
+<!--                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram" target="_blank">Thiruvananthapuram</a>-->
+<!--                </div>-->
+
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--                 <div class="dropdown-menu" aria-labelledby="districtDropdown">-->
+<!--                    {% for district in districts_list %}-->
+<!--                        {% comment %} Construct Wikipedia URL based on district name {% endcomment %}-->
+<!--                        {% with wikipedia_url="https://en.wikipedia.org/wiki/"|add:district.name %}-->
+<!--                            <a class="dropdown-item" href="{{ wikipedia_url }}" target="_blank">{{ district.name }}</a>-->
+<!--                        {% endwith %}-->
+<!--&lt;!&ndash;                         <a class="dropdown-item" href="{% url 'bankapp:district' district.slug %}">{{ district.name }}</a>&ndash;&gt;-->
+<!--                    {% endfor %}-->
+<!--                    <div class="dropdown-divider"></div>-->
+<!--                    {% comment %} Add Wikipedia URLs for additional districts {% endcomment %}-->
+<!--                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam" target="_blank">Ernakulam</a>-->
+<!--                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur" target="_blank">Kannur</a>-->
+<!--                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alappuzha" target="_blank">Alappuzha</a>-->
+<!--                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Malappuram" target="_blank">Malappuram</a>-->
+<!--                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram" target="_blank">Thiruvananthapuram</a>-->
+<!--                </div>-->
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="{% url 'bankapp:home' %}">-->
+<!--        &lt;!&ndash; Add your logo or text as needed &ndash;&gt;-->
+<!--    </a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"-->
+<!--            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--        <ul class="navbar-nav ml-auto"> &lt;!&ndash; Use ml-auto to push items to the right &ndash;&gt;-->
+<!--            &lt;!&ndash; Your navbar items here &ndash;&gt;-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--        <ul class="navbar-nav ml-auto">-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:home' %}">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:login' %}">Login</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:register_user' %}">Register</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'bankapp:dashboard' %}">Dashboard</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--    <a class="nav-link dropdown-toggle" href="#" id="districtDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--        Branches-->
+<!--    </a>-->
+<!--&lt;!&ndash;    <div class="dropdown-menu" aria-labelledby="districtDropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;        {% for district in districts_list %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="{% url 'bankapp:district' district.slug %}">{{ district.name }}</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="dropdown-divider"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="dropdown-item" href="{% url 'bankapp:district' 'district1' %}">district 1</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="dropdown-item" href="{% url 'bankapp:district' 'district2' %}">district 2</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="dropdown-item" href="{% url 'bankapp:district' 'district3' %}">district 3</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="dropdown-item" href="{% url 'bankapp:district' 'district4' %}">district 4</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="dropdown-item" href="{% url 'bankapp:district' 'district5' %}">district 5</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--    <div class="dropdown-menu" aria-labelledby="districtDropdown">-->
+<!--    {% for district in districts_list %}-->
+<!--        {% comment %} Construct Wikipedia URL based on district name {% endcomment %}-->
+<!--        {% with wikipedia_url="https://en.wikipedia.org/wiki/"|add:district.name %}-->
+<!--            <a class="dropdown-item" href="{{ wikipedia_url }}" target="_blank">{{ district.name }}</a>-->
+<!--        {% endwith %}-->
+<!--    {% endfor %}-->
+<!--    <div class="dropdown-divider"></div>-->
+<!--    {% comment %} Add Wikipedia URLs for additional districts {% endcomment %}-->
+<!--    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District1" target="_blank">District 1</a>-->
+<!--    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District2" target="_blank">District 2</a>-->
+<!--    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District3" target="_blank">District 3</a>-->
+<!--    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District4" target="_blank">District 4</a>-->
+<!--    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District5" target="_blank">District 5</a>-->
+<!--    </div>-->
+<!--</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+

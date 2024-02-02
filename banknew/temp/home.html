@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="row mt-5">
+        <div class="col-md-8 mx-auto">
+            <div class="banner">
+                <img src="{% static 'img/baner1.png' %}" alt="Banner Image" class="img-fluid">
+                <a href="{% url 'bankapp:login' %}" class="btn btn-primary mt-3">Login</a>
+            </div>
+
+         </div>
+    </div>
+{% endblock %}
